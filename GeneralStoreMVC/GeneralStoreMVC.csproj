@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>bb818a3a-bfd8-4fa4-80f8-0f252104353a</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.16">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.16">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.PackageManagement" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\Customer\" />
+    <None Remove="Views\Customer\" />
+    <None Remove="NuGet.PackageManagement" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Customer\" />
+    <Folder Include="Views\Customer\" />
+  </ItemGroup>
+</Project>
