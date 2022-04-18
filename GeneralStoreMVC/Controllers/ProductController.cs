@@ -158,7 +158,15 @@ namespace GeneralStoreMVC.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products
+            var product = await _context
+                .Products
+                .Select(p => new ProductDetailModel
+                {
+                    Id = p.Id,
+                    Price = p.Price,
+                    Name = p.Name,
+                    QuantityInStock = p.QuantityInStock,
+                })
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
