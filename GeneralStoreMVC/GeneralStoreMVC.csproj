@@ -27,10 +27,12 @@
     <None Remove="Models\Product\" />
     <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Components\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Customer\" />
     <Folder Include="Views\Customer\" />
     <Folder Include="Models\Product\" />
+    <Folder Include="Components\" />
   </ItemGroup>
 </Project>
