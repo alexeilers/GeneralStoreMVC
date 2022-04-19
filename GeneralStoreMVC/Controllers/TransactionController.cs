@@ -58,7 +58,7 @@ namespace GeneralStoreMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ProductId,CustomerId,Quantity,DateOfTransation")] Transaction transaction)
+        public async Task<IActionResult> Create([Bind("Id,ProductId,CustomerId,Quantity,DateOfTransaction")] Transaction transaction)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace GeneralStoreMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ProductId,CustomerId,Quantity,DateOfTransation")] Transaction transaction)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ProductId,CustomerId,Quantity,DateOfTransaction")] Transaction transaction)
         {
             if (id != transaction.Id)
             {
